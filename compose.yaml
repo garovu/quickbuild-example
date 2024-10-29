@@ -1,0 +1,13 @@
+name: quickbuild
+services:
+  quickbuild:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8810:8810"
+    volumes:
+      - quickbuild:/data
+
+volumes:
+  quickbuild:
